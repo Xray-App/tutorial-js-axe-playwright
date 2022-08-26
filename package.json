@@ -1,0 +1,15 @@
+{
+  "name": "t",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@playwright/test": "^1.25.1",
+    "axe-playwright": "^1.1.11",
+    "playwright": "^1.25.1"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}
