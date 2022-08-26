@@ -25,6 +25,7 @@ jobs:
     - run: |
         npm install
     - run: |
+       continue-on-error: true
        npx playwright test
    # Import results back to Xray (Server and Cloud)
    # - name: "Import results to Xray (server/DC)"
