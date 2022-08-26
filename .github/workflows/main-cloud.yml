@@ -29,17 +29,17 @@ jobs:
       run: |
        npx playwright test
    # Import results back to Xray (Server and Cloud)
-    - name: "Import results to Xray (server/DC)"
-      uses: mikepenz/xray-action@v2.3.0
-      with:
-         username: ${{ secrets.JIRASERVER_USERNAME }}
-         password: ${{ secrets.JIRASERVER_PASSWORD }}
-         xrayCloud: "false"
-         xrayBaseUrl: ${{ secrets.JIRASERVER_BASE_URL }}
-         testFormat: "junit"
-         testPaths: "xray-report.xml"
-         testPlanKey: "${{ secrets.XRAYSERVER_TEST_PLAN_KEY }}"
-         projectKey: "${{ secrets.JIRASERVER_PROJECT_KEY }}"
+   # - name: "Import results to Xray (server/DC)"
+   #   uses: mikepenz/xray-action@v2.3.0
+   #   with:
+   #      username: ${{ secrets.JIRASERVER_USERNAME }}
+   #      password: ${{ secrets.JIRASERVER_PASSWORD }}
+   #      xrayCloud: "false"
+   #      xrayBaseUrl: ${{ secrets.JIRASERVER_BASE_URL }}
+   #      testFormat: "junit"
+   #      testPaths: "xray-report.xml"
+   #      testPlanKey: "${{ secrets.XRAYSERVER_TEST_PLAN_KEY }}"
+   #      projectKey: "${{ secrets.JIRASERVER_PROJECT_KEY }}"
     - name: "Import results to Xray (cloud)"
       uses: mikepenz/xray-action@v2.3.0
       with:
