@@ -24,8 +24,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: |
         npm install
-    - run: |
-       continue-on-error: true
+    - name: Run Axe Playwright validations
+      continue-on-error: true
+      run: |
        npx playwright test
    # Import results back to Xray (Server and Cloud)
    # - name: "Import results to Xray (server/DC)"
