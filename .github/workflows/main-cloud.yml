@@ -31,7 +31,7 @@ jobs:
    # Import results back to Xray (Server and Cloud)
     - name: "Import results to Xray (server/DC)"
       uses: mikepenz/xray-action@v2.3.0
-        with:
+      with:
          username: ${{ secrets.JIRASERVER_USERNAME }}
          password: ${{ secrets.JIRASERVER_PASSWORD }}
          xrayCloud: "false"
